@@ -13,6 +13,5 @@ namespace Test_Maximum.TestCase
             int actualMax = md.maximumInteger(100, 225, 14);
             Assert.AreEqual(225, actualMax);
         }
-
     }
 }
