@@ -4,13 +4,18 @@ using System.Linq;
 namespace MaximumGeneric
 {
     public class MaximumNumber
-    {
-        //MAIN METHOD
+    { 
+        ///<summary>
+        ///Main Method
+        /// </summary>
         public static void Main(String[] args)
         {
             Console.WriteLine("Welcome to Generics");
             Console.ReadKey();
         }
+        ///<summary>
+        ///Create generic class
+        /// </summary>
         public class GenericClass<anyDataType>
         {
             //VARIABLE DECLARE
