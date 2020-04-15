@@ -1,50 +1,37 @@
 using NUnit.Framework;
+using static TestMaximum.MaximumNumber;
 
 namespace TestMaximum
 {
     public class Tests
     {
-        ///<summary>
-        ///Test case for Integer maximum Number
-        /// </summary>
         [Test]
-        public static void maximumOfTheThreeIntegerNumbers()
+        public void maximumNumberTest_toCompare_threeNumbers()
         {
-            int MaximumValue = FindMaximumNumber<int>.testMaximum(3, 4, 5);
-            Assert.AreEqual(5, MaximumValue);
+            int MaximumValueOfInteger = MaximumNumber.Generic<int>.getMaximumNumber(23, 43, 45);
+            Assert.AreEqual(45, MaximumValueOfInteger);
         }
-        ///<summary>
-        ///Test case for Floating maximum Number
-        /// </summary>
         [Test]
-        public static void maximumOfTheThreeFloatNumbers()
+        public void maximumDoubleTest_toCompare_threeNumbers()
         {
-            float MaximumValue = FindMaximumNumber<float>.testMaximum(1.01f, 5.02f, 4.10f);
-            Assert.AreEqual(5.02f, MaximumValue);
+            double MaximumValueOfFloat = MaximumNumber.Generic<double>.getMaximumNumber(2.6, 9.5, 5.6);
+            Assert.AreEqual(9.5, MaximumValueOfFloat);
         }
-        ///<summary>
-        ///Test case for String size maximum Number
-        /// </summary>
         [Test]
-        public static void maximumOfTheThreeStringElement()
+        public void maximumStringTest_toCompare_threeString()
         {
-            MaximumNumber value = new MaximumNumber();
-            int MaximumValue = FindMaximumNumber<int>.testMaximum("The".Length, "Maximum".Length, "Number".Length);
-            Assert.AreEqual(7, MaximumValue);
+            int MaximumValueOfString = MaximumNumber.Generic<int>.getMaximumNumber("Corona".Length, "is".Length, "Deadly!".Length);
+            Assert.AreEqual(7, MaximumValueOfString);
         }
-        ///<summary>
-        ///Test case for Print Maximum Number
-        /// </summary>
         [Test]
         public static void maximumOfTheThreeIntegerFloatAndString()
         {
-            int MaximumValueOfInteger = FindMaximumNumber<int>.testMaximum(3, 4, 5);
-            float MaximumValueOfFloat = FindMaximumNumber<float>.testMaximum(1.01f, 5.02f, 4.10f);
-            int MaximumValueOfString = FindMaximumNumber<int>.testMaximum("The".Length, "Maximum".Length, "Number".Length);
-            Assert.AreEqual(5, MaximumValueOfInteger);
-            Assert.AreEqual(5.02f, MaximumValueOfFloat);
+            int MaximumValueOfInteger = MaximumNumber.Generic<int>.getMaximumNumber(23, 43, 45);
+            double MaximumValueOfFloat = MaximumNumber.Generic<double>.getMaximumNumber(2.6, 9.5, 5.6);
+            int MaximumValueOfString = MaximumNumber.Generic<int>.getMaximumNumber("Corona".Length, "is".Length, "Deadly!".Length);
+            Assert.AreEqual(45, MaximumValueOfInteger);
+            Assert.AreEqual(9.5, MaximumValueOfFloat);
             Assert.AreEqual(7, MaximumValueOfString);
-
         }
     }
 }
