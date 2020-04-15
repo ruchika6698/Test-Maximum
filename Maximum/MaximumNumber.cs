@@ -5,6 +5,9 @@ namespace TestMaximum
 {
     public class MaximumNumber
     {
+        ///<summary>
+        ///Main Method
+        /// </summary>
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Maximum Problem");
@@ -12,8 +15,9 @@ namespace TestMaximum
             Generic<double>.getMaximumNumber(3.5, 4.21, 5.5);
             Generic<int>.getMaximumNumber("The".Length, "Maximum".Length, "Number".Length);
         }
-
-        //GENERIC CLASS
+        ///<summary>
+        ///GENERIC CLASS
+        /// </summary>
         public class Generic<T>
         {
             T variable1;
