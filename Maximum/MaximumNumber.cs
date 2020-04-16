@@ -54,7 +54,7 @@ namespace TestMaximum
             }
         }
         /// <summary>
-        /// Generic Class createg to check for more than 3 Data Entry
+        /// Generic Class create to check for more than 3 
         /// </summary>
         public class GenericCheck<anyDataType>
         {

@@ -46,7 +46,7 @@ namespace TestMaximum
             Assert.AreEqual(7, MaximumValueOfString.result);
         }
         ///<summary>
-        ///More than three parameters
+        ///test case for More than three parameters and find the maximum number
         /// </summary>
         [Test]
         public void MorethanthreeParameters()
