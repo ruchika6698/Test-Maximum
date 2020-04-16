@@ -11,40 +11,52 @@ namespace TestMaximum
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Maximum Problem");
-            Generic<int>.getMaximumNumber(3, 4, 5);
-            Generic<double>.getMaximumNumber(3.5, 4.21, 5.5);
-            Generic<int>.getMaximumNumber("The".Length, "Maximum".Length, "Number".Length);
+            Generic<int> maximumInteger = new Generic<int>(3, 4, 5);
+
+            Generic<float> maximumFloat = new Generic<float>(2.6f, 9.5f, 5.6f);
+
+            Generic<int> maximumString = new Generic<int>("The".Length, "Maximum".Length, "Number".Length);
         }
         ///<summary>
         ///GENERIC CLASS
         /// </summary>
-        public class Generic<T>
+        public class Generic<T> where T : IComparable
         {
-            T variable1;
-            T variable2;
-            T variable3;
+            public T result;
+            private T data1;
+            private T data2;
+            private T data3;
 
-            //CONSTRUCTOR
             public Generic(T variable1, T variable2, T variable3)
             {
-                this.variable1 = variable1;
-                this.variable2 = variable2;
-                this.variable3 = variable3;
+                data1 = variable1;
+                data2 = variable2;
+                data3 = variable3;
+                result = testMaximum(data1, data2, data3);
             }
 
-            //GENERIC METHODS
-            public T getMaximumNumber()
+            public T testMaximum(T data1, T data2, T data3)
             {
-                return getMaximumNumber(variable1, variable2, variable3);
-            }
 
-            //GETTING MAXIMUM VALUES
-            public static T getMaximumNumber(T variable1, T variable2, T variable3)
+                if (data1.CompareTo(data2) > 0 && data1.CompareTo(data3) > 0)
+                {
+                    return printMaximum(data1);
+                }
+                else if (data2.CompareTo(data1) > 0 && data2.CompareTo(data3) > 0)
+                {
+                    return printMaximum(data2);
+                }
+                else
+                {
+                    return printMaximum(data3);
+                }
+            }
+            public T printMaximum(T max)
             {
-                T[] arrayValue = { variable1, variable2, variable3 };
-                T maxValue = arrayValue.Max();
-                return maxValue;
+                Console.WriteLine("max value = " + max);
+                return max;
             }
         }
+            
     }
 }
