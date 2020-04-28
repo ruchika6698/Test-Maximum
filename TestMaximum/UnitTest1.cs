@@ -9,7 +9,7 @@ namespace TestMaximum
         ///Test case for Integer maximum Number
         /// </summary>
         [Test]
-        public void maximumNumberTest_toCompare_threeNumbers()
+        public void givenTheNumbers_whenIntegerDatatype_returnmaximumNumber()
         {
             Generic<int> MaximumValueOfInteger = new Generic<int>(23, 43, 45);
             Assert.AreEqual(45, MaximumValueOfInteger.result);
@@ -18,7 +18,7 @@ namespace TestMaximum
         ///Test case for Floating maximum Number
         /// </summary>
         [Test]
-        public void maximumDoubleTest_toCompare_threeNumbers()
+        public void givenTheNumbers_whenFloatDatatype_returnmaximumNumber()
         {
             Generic<float> MaximumValueOfFloat = new Generic<float>(2.6f, 9.5f, 5.6f);
             Assert.AreEqual(9.5, MaximumValueOfFloat.result);
@@ -27,7 +27,7 @@ namespace TestMaximum
         ///Test case for String size maximum Number
         /// </summary>
         [Test]
-        public void maximumStringTest_toCompare_threeString()
+        public void givenTheNumbers_whenstringDatatype_returnmaximumsizeofstring()
         {
             Generic<int> MaximumValueOfString = new Generic<int>("The".Length, "Maximum".Length, "Number".Length);
             Assert.AreEqual(7, MaximumValueOfString.result);
@@ -36,7 +36,7 @@ namespace TestMaximum
         ///print generic method to print to get maximum number
         /// </summary>
         [Test]
-        public static void maximumOfTheThreeIntegerFloatAndString()
+        public static void givenTheNumbers_whenallDatatype_returntestmaximum()
         {
             Generic<int> MaximumValueOfInteger = new Generic<int>(23, 43, 45);
             Generic<float> MaximumValueOfFloat = new Generic<float>(2.6f, 9.5f, 5.6f);
@@ -49,7 +49,7 @@ namespace TestMaximum
         ///test case for More than three parameters and find the maximum number
         /// </summary>
         [Test]
-        public void MorethanthreeParameters()
+        public void givenmorethanthreeNumbers_whenallDatatype_returntestmaximum()
         {
             GenericCheck<int> obj1 = new GenericCheck<int>();
             GenericCheck<double> obj2 = new GenericCheck<double>();

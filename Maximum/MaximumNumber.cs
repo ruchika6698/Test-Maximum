@@ -15,15 +15,16 @@ namespace TestMaximum
         ///<summary>
         ///GENERIC CLASS
         /// </summary>
-        public class Generic<T> where T : IComparable
+        public class Generic<AnydataType> where AnydataType : IComparable
         {
-            public T result;
-            private T data1;
-            private T data2;
-            private T data3;
-            private T temp;
+            //encapsulate Data
+            public AnydataType result;
+            private AnydataType data1;
+            private AnydataType data2;
+            private AnydataType data3;
+          
 
-            public Generic(T variable1, T variable2, T variable3)
+            public Generic(AnydataType variable1, AnydataType variable2, AnydataType variable3)
             {
                 data1 = variable1;
                 data2 = variable2;
@@ -31,7 +32,7 @@ namespace TestMaximum
                 result = testMaximum(data1, data2, data3);
             }
 
-            public T testMaximum(T data1, T data2, T data3)
+            public AnydataType testMaximum(AnydataType data1, AnydataType data2, AnydataType data3)
             {
 
                 if (data1.CompareTo(data2) > 0 && data1.CompareTo(data3) > 0)
@@ -47,7 +48,7 @@ namespace TestMaximum
                     return printMaximum(data3);
                 }
             }
-            public T printMaximum(T max)
+            public AnydataType printMaximum(AnydataType max)
             {
                 Console.WriteLine("max value = " + max);
                 return max;
